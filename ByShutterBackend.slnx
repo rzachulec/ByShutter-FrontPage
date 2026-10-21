@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="compose.yaml" />
+  </Folder>
+  <Project Path="ByShutterBackend.Application/ByShutterBackend.Application.csproj" />
+  <Project Path="ByShutterBackend.Infrastructure/ByShutterBackend.Infrastructure.csproj" />
+  <Project Path="ByShutterBackend.Web/ByShutterBackend.Web.csproj" />
+  <Project Path="ByShutterBackend.Domain/ByShutterBackend.Domain.csproj" />
+</Solution>

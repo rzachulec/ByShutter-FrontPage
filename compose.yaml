@@ -1,0 +1,42 @@
+﻿services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: byshutter
+      POSTGRES_PASSWORD: byshutter_password
+      POSTGRES_DB: byshutter
+    ports:
+      - "5432:5432"
+        
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "5701:80"
+      - "5702:443"
+      - "5702:443/udp"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      - ./conf:/etc/caddy
+      - ./site:/srv
+  
+  byshutterbackend.web:
+    image: byshutterbackend.web
+    build:
+      context: .
+      dockerfile: ByShutterBackend.Web/Dockerfile
+    ports:
+      - "5700:8080"
+    environment:
+      ImageStoragePathOptions__Directory: /app/uploads
+    volumes:
+      - ./site:/app/uploads
+
+volumes:
+  caddy_data:
+  caddy_config:
+  by_shutter_images:
+  

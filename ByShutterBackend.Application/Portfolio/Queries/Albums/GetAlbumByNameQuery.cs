@@ -1,0 +1,8 @@
+using ByShutterBackend.Application.Portfolio.DTO;
+using MediatR;
+
+namespace ByShutterBackend.Application.Portfolio.Queries.Albums;
+
+public record GetAlbumByNameQuery(
+    string AlbumName
+) : IRequest<AlbumDto>;
