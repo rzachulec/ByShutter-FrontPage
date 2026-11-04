@@ -118,6 +118,35 @@ Mierzymy klienta `ByShutterPage` (Vue 3, TypeScript, Vite, Tailwind CSS 4, minim
 
 Różnice względem konfiguracji z raportu 1, które wpływają na porównywalność wartości bezwzględnych: czcionka (Geist, licencja OFL) jest hostowana lokalnie, a nie importowana z Google Fonts, więc pomiary nie zależą od sieci zewnętrznej; nie ma pliku zastępczego `ClockImage.png`; pakiet JavaScript jest mniejszy (ok. 94 kB, 36 kB po kompresji, wobec ok. 337 kB w raporcie 1). Pomiary wykonano na wersji produkcyjnej klienta zbudowanej przed dodaniem panelu administracyjnego (jego widoki są ładowane osobno i nie wpływają na strony publiczne), więc oba pomiary używają identycznego pakietu. Wartości bezwzględne metryk nie są więc wprost porównywalne z wartościami z etapu 1. Wniosek o wpływie zdjęć jest jednak przenaszalny, bo zdjęcia stanowią ponad 99 % przesyłanych bajtów (rozdz. 3), a klient niczego w nich nie zmienia.
 
+== Strony publiczne serwisu
+
+Poniższe zrzuty ekranu pokazują strony publiczne klienta, na których wykonano pomiary, w stanie po wgraniu danych testowych (rozdz. 2.2): stronę główną, listę albumów, widok albumu oraz podstrony „About” i „Contact”. Panel administracyjny (`/config`) nie jest częścią pomiarów i został pominięty.
+
+#figure(
+  image("screenshots/home.png", width: 82%),
+  caption: [Strona główna (`/home`): zdjęcie tytułowe z hasłem i nawigacją],
+)
+
+#figure(
+  image("screenshots/albums.png", width: 82%),
+  caption: [Lista albumów (`/albums`)],
+)
+
+#figure(
+  image("screenshots/album.png", width: 82%),
+  caption: [Widok albumu (`/albums/{id}`): siatka zdjęć],
+)
+
+#figure(
+  image("screenshots/about.png", width: 82%),
+  caption: [Podstrona „About” (`/about-me`)],
+)
+
+#figure(
+  image("screenshots/contact.png", width: 82%),
+  caption: [Podstrona „Contact” (`/contact`)],
+)
+
 == Narzędzia, profile sieci i procedura
 
 Lighthouse uruchamiamy programowo z _stosowanym_ (nie symulowanym) ograniczaniem sieci i CPU, czyli przeglądarka rzeczywiście pobiera zasoby z zadaną przepustowością i opóźnieniem. Dzięki temu czasy są obserwowane, jak w WebPageTest, a nie szacowane modelem. Profile odpowiadają nazwom używanym w WebPageTest, o których pisaliśmy w raporcie 1:
