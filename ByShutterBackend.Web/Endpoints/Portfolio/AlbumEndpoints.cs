@@ -33,6 +33,12 @@ public static class AlbumEndpoints
 
         group.MapPost("/", CreateAlbumAsync).RequireAuthorization();
 
+        group.MapPut("/{albumId:guid}", UpdateAlbumAsync)
+            .RequireAuthorization()
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status404NotFound)
+            .Produces(StatusCodes.Status409Conflict);
+
         group.MapDelete("/{albumId:guid}", DeleteAlbumAsync)
             .RequireAuthorization()
             .Produces(StatusCodes.Status204NoContent)
@@ -141,6 +147,22 @@ public static class AlbumEndpoints
         await mediator.Send(command, ct);
 
         return Results.NoContent();
+    }
+
+    private static async Task<IResult> UpdateAlbumAsync(Guid albumId, [FromBody] UpdateAlbumRequest request,
+        IMediator mediator, CancellationToken ct)
+    {
+        var result = await mediator.Send(
+            new UpdateAlbumCommand(albumId, request.Name, request.Description ?? string.Empty, request.Date), ct);
+
+        if (result.IsSuccess)
+        {
+            return Results.NoContent();
+        }
+
+        var error = result.Errors[0];
+        var status = error.Metadata.TryGetValue(UpdateAlbumCommandHandler.StatusKey, out var code) ? (int)code : 400;
+        return Results.Problem(error.Message, statusCode: status);
     }
 
     private static async Task<IResult> DeleteAlbumAsync(Guid albumId, IMediator mediator, CancellationToken ct)
