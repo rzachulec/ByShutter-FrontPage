@@ -8,6 +8,7 @@ public class FileStorage : IFileStorage
     {
         Console.WriteLine("directory: " + directory);
         var path = Path.Combine(directory, displayName);
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
 
         await using var fs = File.Create(path);
         await stream.CopyToAsync(fs);
