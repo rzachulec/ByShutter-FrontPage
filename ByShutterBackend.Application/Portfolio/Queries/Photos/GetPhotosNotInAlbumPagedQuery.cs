@@ -37,7 +37,8 @@ public sealed class GetPhotosNotInAlbumPagedQueryHandler : IRequestHandler<GetPh
             p.ImageAlt,
             p.UploadedAt,
             p.DisplayName,
-            p.Description
+            p.Description,
+            p.OriginalFileName
         )));
     }
 }

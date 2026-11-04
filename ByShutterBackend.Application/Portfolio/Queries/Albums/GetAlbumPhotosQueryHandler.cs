@@ -31,7 +31,8 @@ public class GetAlbumPhotosQueryHandler : IRequestHandler<GetAlbumPhotosQuery, R
             ap.Photo.ImageAlt,
             ap.Photo.UploadedAt,
             ap.Photo.DisplayName,
-            ap.Photo.Description
+            ap.Photo.Description,
+            ap.Photo.OriginalFileName
         )));
     }
 }

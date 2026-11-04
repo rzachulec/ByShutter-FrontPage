@@ -31,7 +31,8 @@ public class GetPhotoByFileNameQueryHandler : IRequestHandler<GetPhotoByFileName
             photo.ImageAlt,
             photo.UploadedAt,
             photo.DisplayName,
-            photo.Description
+            photo.Description,
+            photo.OriginalFileName
         );
     }
 }

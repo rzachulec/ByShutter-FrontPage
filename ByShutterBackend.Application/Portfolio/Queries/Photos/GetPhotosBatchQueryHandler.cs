@@ -27,7 +27,8 @@ public class GetPhotosBatchQueryHandler : IRequestHandler<GetPhotosBatchQuery, I
             photo.ImageAlt,
             photo.UploadedAt,
             photo.DisplayName,
-            photo.Description
+            photo.Description,
+            photo.OriginalFileName
         ));
         
         return batchDto;

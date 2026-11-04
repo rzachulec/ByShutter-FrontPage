@@ -7,5 +7,6 @@ public record PhotoDto(
     string ImageAlt,
     DateTime UploadedAt,
     string? DisplayName,
-    string? Description
+    string? Description,
+    string? OriginalFileName = null
 );
