@@ -33,7 +33,8 @@ public class GetAlbumByNameQueryHandler : IRequestHandler<GetAlbumByNameQuery, A
             album.Id,
             album.Name,
             album.Description,
-            albumPhotoDto
+            albumPhotoDto,
+            album.Date
         );
     }
 }

@@ -34,7 +34,8 @@ public class GetAlbumByIdQueryHandler : IRequestHandler<GetAlbumByIdQuery, Album
             album.Id,
             album.Name,
             album.Description,
-            photosDto
+            photosDto,
+            album.Date
         );
     }
 }

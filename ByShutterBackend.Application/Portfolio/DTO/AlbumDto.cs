@@ -4,5 +4,6 @@ public record AlbumDto(
     Guid Id,
     string Name,
     string Description,
-    IEnumerable<AlbumPhotoDto> Photos
+    IEnumerable<AlbumPhotoDto> Photos,
+    DateTime? Date = null
 );

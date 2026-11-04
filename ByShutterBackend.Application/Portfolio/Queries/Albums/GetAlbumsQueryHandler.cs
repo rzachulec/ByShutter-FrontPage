@@ -29,7 +29,8 @@ public class GetAlbumsQueryHandler : IRequestHandler<GetAlbumsQuery, IEnumerable
                 p.AlbumId,
                 p.PhotoId,
                 p.AddedToAlbumAt
-            ))
+            )),
+            a.Date
         ));
         
         return albumDto;
