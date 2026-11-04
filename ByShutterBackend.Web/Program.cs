@@ -2,6 +2,7 @@ using ByShutterBackend.Application;
 using ByShutterBackend.Application.Common.Behaviour;
 using ByShutterBackend.Domain.ClientAccess;
 using ByShutterBackend.Domain.Common.Interfaces;
+using ByShutterBackend.Infrastructure.Imaging;
 using ByShutterBackend.Infrastructure.Persistance;
 using ByShutterBackend.Infrastructure.Repositories;
 using ByShutterBackend.Web.Common;
@@ -52,6 +53,7 @@ builder.Services.AddScoped<IPortfolioTileRepository, PortfolioTileRepository>();
 builder.Services.AddScoped<IAlbumRepository, AlbumRepository>();
 builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 builder.Services.AddScoped<IFileStorage, FileStorage>();
+builder.Services.AddSingleton<IImageOptimizer, ImageOptimizer>();
 
 
 builder.Services.AddDbContext<ByShutterDbContext>(options =>
