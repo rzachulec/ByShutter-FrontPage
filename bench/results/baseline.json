@@ -1,0 +1,1625 @@
+{
+  "label": "baseline",
+  "date": "2026-11-03T23:13:44.297Z",
+  "env": {
+    "mac": "Apple M2 Pro",
+    "macos": "27.0.1",
+    "docker": "29.4.3 / 12 CPUs / 8321429504 bytes RAM",
+    "apiImage": "sha256:0388012b268ef196a4fff85656d352c6a0bd19c595a0a2c47966c1c83717af43 created 2026-11-03T22:35:43.281925131Z",
+    "gitHead": "7b7a06e",
+    "node": "v26.0.0",
+    "lighthouse": "13.6.0",
+    "chrome": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "runsPerCombination": 5
+  },
+  "profiles": {
+    "4g": "4G, mobile emulation (9 Mbps down, 170 ms RTT, 4x CPU slowdown)",
+    "cable": "Cable, desktop (5 Mbps down, 28 ms RTT, no CPU slowdown)"
+  },
+  "uploads": [
+    {
+      "name": "sample-01.jpeg",
+      "sourceBytes": 4434717,
+      "uploadMs": 88
+    },
+    {
+      "name": "sample-02.jpeg",
+      "sourceBytes": 3677024,
+      "uploadMs": 39
+    },
+    {
+      "name": "sample-03.jpeg",
+      "sourceBytes": 4213567,
+      "uploadMs": 40
+    },
+    {
+      "name": "sample-04.jpeg",
+      "sourceBytes": 5185121,
+      "uploadMs": 46
+    },
+    {
+      "name": "sample-05.jpeg",
+      "sourceBytes": 3338799,
+      "uploadMs": 31
+    },
+    {
+      "name": "sample-06.jpeg",
+      "sourceBytes": 3210867,
+      "uploadMs": 27
+    },
+    {
+      "name": "sample-07.jpg",
+      "sourceBytes": 5936248,
+      "uploadMs": 48
+    }
+  ],
+  "storage": {
+    "files": [
+      {
+        "file": "sample-01.jpeg",
+        "bytes": 4434717
+      },
+      {
+        "file": "sample-02.jpeg",
+        "bytes": 3677024
+      },
+      {
+        "file": "sample-03.jpeg",
+        "bytes": 4213567
+      },
+      {
+        "file": "sample-04.jpeg",
+        "bytes": 5185121
+      },
+      {
+        "file": "sample-05.jpeg",
+        "bytes": 3338799
+      },
+      {
+        "file": "sample-06.jpeg",
+        "bytes": 3210867
+      },
+      {
+        "file": "sample-07.jpg",
+        "bytes": 5936248
+      }
+    ],
+    "originals": [],
+    "totalBytes": 29996343
+  },
+  "delivery": {
+    "api": {
+      "home-profile": {
+        "bytes": 1320,
+        "code": 200,
+        "ttfbMs": 4.9,
+        "totalMs": 4.9
+      },
+      "photo-metadata": {
+        "bytes": 251,
+        "code": 200,
+        "ttfbMs": 3.5,
+        "totalMs": 3.6
+      },
+      "albums": {
+        "bytes": 1118,
+        "code": 200,
+        "ttfbMs": 4.8,
+        "totalMs": 4.9
+      },
+      "album-images": {
+        "bytes": 1773,
+        "code": 200,
+        "ttfbMs": 4.2,
+        "totalMs": 4.2
+      }
+    },
+    "images": {
+      "sample-01.jpeg": {
+        "bytes": 4434717,
+        "code": 200,
+        "ttfbMs": 4.4,
+        "totalMs": 34.9
+      },
+      "sample-02.jpeg": {
+        "bytes": 3677024,
+        "code": 200,
+        "ttfbMs": 3.8,
+        "totalMs": 29.2
+      },
+      "sample-03.jpeg": {
+        "bytes": 4213567,
+        "code": 200,
+        "ttfbMs": 3.8,
+        "totalMs": 32
+      },
+      "sample-04.jpeg": {
+        "bytes": 5185121,
+        "code": 200,
+        "ttfbMs": 3.8,
+        "totalMs": 40.2
+      },
+      "sample-05.jpeg": {
+        "bytes": 3338799,
+        "code": 200,
+        "ttfbMs": 3.8,
+        "totalMs": 26.1
+      },
+      "sample-06.jpeg": {
+        "bytes": 3210867,
+        "code": 200,
+        "ttfbMs": 3.9,
+        "totalMs": 26.1
+      },
+      "sample-07.jpg": {
+        "bytes": 5936248,
+        "code": 200,
+        "ttfbMs": 3.9,
+        "totalMs": 44.6
+      }
+    },
+    "headers": {
+      "image": {
+        "content-type": "image/jpeg",
+        "etag": "\"dmly0a9u2gte-2n1ul\"",
+        "last-modified": "Tue, 03 Nov 2026 22:52:14 GMT",
+        "server": "Caddy",
+        "content-length": "4434717"
+      },
+      "apiJson": {
+        "content-type": "application/json; charset=utf-8",
+        "server": "Kestrel"
+      }
+    },
+    "imagesTotal": {
+      "bytes": 29996343,
+      "totalMs": 233.1
+    }
+  },
+  "lighthouse": {
+    "4g/home": {
+      "profile": "4G, mobile emulation (9 Mbps down, 170 ms RTT, 4x CPU slowdown)",
+      "page": "/home",
+      "runs": [
+        {
+          "ttfbMs": 1,
+          "fcpMs": 554,
+          "lcpMs": 21781,
+          "cls": 0.1088,
+          "loadMs": 700,
+          "fullyLoadedMs": 22108,
+          "speedIndexMs": 12730,
+          "tbtMs": 0,
+          "totalBytes": 24156307,
+          "requests": 21,
+          "imageBytes": 24073779,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073779,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073779
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 1038,
+          "lcpLoadDurationMs": 20415,
+          "lcpRenderDelayMs": 325,
+          "imageSavingsBytes": 21968415,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 3,
+          "fcpMs": 521,
+          "lcpMs": 21796,
+          "cls": 0.1088,
+          "loadMs": 671,
+          "fullyLoadedMs": 22089,
+          "speedIndexMs": 12646,
+          "tbtMs": 0,
+          "totalBytes": 24156307,
+          "requests": 21,
+          "imageBytes": 24073779,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073779,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073779
+            }
+          },
+          "lcpTtfbMs": 4,
+          "lcpLoadDelayMs": 1016,
+          "lcpLoadDurationMs": 20418,
+          "lcpRenderDelayMs": 358,
+          "imageSavingsBytes": 21968415,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 503,
+          "lcpMs": 21786,
+          "cls": 0.1088,
+          "loadMs": 660,
+          "fullyLoadedMs": 22071,
+          "speedIndexMs": 12637,
+          "tbtMs": 0,
+          "totalBytes": 24156307,
+          "requests": 21,
+          "imageBytes": 24073779,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073779,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073779
+            }
+          },
+          "lcpTtfbMs": 4,
+          "lcpLoadDelayMs": 997,
+          "lcpLoadDurationMs": 20420,
+          "lcpRenderDelayMs": 366,
+          "imageSavingsBytes": 21968415,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 497,
+          "lcpMs": 21779,
+          "cls": 0.1088,
+          "loadMs": 657,
+          "fullyLoadedMs": 22078,
+          "speedIndexMs": 12636,
+          "tbtMs": 0,
+          "totalBytes": 24156307,
+          "requests": 21,
+          "imageBytes": 24073779,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073779,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073779
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 1005,
+          "lcpLoadDurationMs": 20417,
+          "lcpRenderDelayMs": 353,
+          "imageSavingsBytes": 21968415,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 505,
+          "lcpMs": 21783,
+          "cls": 0.1088,
+          "loadMs": 659,
+          "fullyLoadedMs": 22074,
+          "speedIndexMs": 12631,
+          "tbtMs": 107,
+          "totalBytes": 24156307,
+          "requests": 21,
+          "imageBytes": 24073779,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073779,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073779
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 1003,
+          "lcpLoadDurationMs": 20417,
+          "lcpRenderDelayMs": 360,
+          "imageSavingsBytes": 21968415,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.61
+        }
+      ],
+      "median": {
+        "ttfbMs": 2,
+        "fcpMs": 505,
+        "lcpMs": 21783,
+        "cls": 0.1088,
+        "loadMs": 660,
+        "fullyLoadedMs": 22078,
+        "speedIndexMs": 12637,
+        "tbtMs": 0,
+        "totalBytes": 24156307,
+        "requests": 21,
+        "imageBytes": 24073779,
+        "imageRequests": 6,
+        "performanceScore": 0.62,
+        "lcpTtfbMs": 3,
+        "lcpLoadDelayMs": 1005,
+        "lcpLoadDurationMs": 20417,
+        "lcpRenderDelayMs": 358,
+        "imageSavingsBytes": 21968415
+      }
+    },
+    "4g/album": {
+      "profile": "4G, mobile emulation (9 Mbps down, 170 ms RTT, 4x CPU slowdown)",
+      "page": "/albums/01a1a39c-f5ea-736c-9cac-618ba2656728",
+      "runs": [
+        {
+          "ttfbMs": 2,
+          "fcpMs": 502,
+          "lcpMs": 20584,
+          "cls": 0.0934,
+          "loadMs": 657,
+          "fullyLoadedMs": 27049,
+          "speedIndexMs": 12913,
+          "tbtMs": 1399,
+          "totalBytes": 30093253,
+          "requests": 15,
+          "imageBytes": 30013378,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013378,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013378
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 822,
+          "lcpLoadDurationMs": 19522,
+          "lcpRenderDelayMs": 237,
+          "imageSavingsBytes": 29939238,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-05.jpeg\" alt=\"Sample photo 05\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.38
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 528,
+          "lcpMs": 20946,
+          "cls": 0.0934,
+          "loadMs": 678,
+          "fullyLoadedMs": 27066,
+          "speedIndexMs": 12997,
+          "tbtMs": 2231,
+          "totalBytes": 30093253,
+          "requests": 15,
+          "imageBytes": 30013378,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013378,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013378
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 842,
+          "lcpLoadDurationMs": 19512,
+          "lcpRenderDelayMs": 589,
+          "imageSavingsBytes": 29939238,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-05.jpeg\" alt=\"Sample photo 05\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 507,
+          "lcpMs": 20749,
+          "cls": 0.0934,
+          "loadMs": 656,
+          "fullyLoadedMs": 27060,
+          "speedIndexMs": 13000,
+          "tbtMs": 1449,
+          "totalBytes": 30093253,
+          "requests": 15,
+          "imageBytes": 30013378,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013378,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013378
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 826,
+          "lcpLoadDurationMs": 19522,
+          "lcpRenderDelayMs": 398,
+          "imageSavingsBytes": 29939238,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-05.jpeg\" alt=\"Sample photo 05\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.37
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 507,
+          "lcpMs": 20903,
+          "cls": 0.0934,
+          "loadMs": 655,
+          "fullyLoadedMs": 27048,
+          "speedIndexMs": 13000,
+          "tbtMs": 1558,
+          "totalBytes": 30093253,
+          "requests": 15,
+          "imageBytes": 30013378,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013378,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013378
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 821,
+          "lcpLoadDurationMs": 19523,
+          "lcpRenderDelayMs": 556,
+          "imageSavingsBytes": 29939238,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-05.jpeg\" alt=\"Sample photo 05\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.37
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 516,
+          "lcpMs": 20755,
+          "cls": 0.0934,
+          "loadMs": 659,
+          "fullyLoadedMs": 27056,
+          "speedIndexMs": 12938,
+          "tbtMs": 1328,
+          "totalBytes": 30093253,
+          "requests": 15,
+          "imageBytes": 30013378,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013378,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013378
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 829,
+          "lcpLoadDurationMs": 19396,
+          "lcpRenderDelayMs": 526,
+          "imageSavingsBytes": 29939238,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-05.jpeg\" alt=\"Sample photo 05\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.38
+        }
+      ],
+      "median": {
+        "ttfbMs": 2,
+        "fcpMs": 507,
+        "lcpMs": 20755,
+        "cls": 0.0934,
+        "loadMs": 657,
+        "fullyLoadedMs": 27056,
+        "speedIndexMs": 12997,
+        "tbtMs": 1449,
+        "totalBytes": 30093253,
+        "requests": 15,
+        "imageBytes": 30013378,
+        "imageRequests": 7,
+        "performanceScore": 0.37,
+        "lcpTtfbMs": 3,
+        "lcpLoadDelayMs": 826,
+        "lcpLoadDurationMs": 19522,
+        "lcpRenderDelayMs": 526,
+        "imageSavingsBytes": 29939238
+      }
+    },
+    "cable/home": {
+      "profile": "Cable, desktop (5 Mbps down, 28 ms RTT, no CPU slowdown)",
+      "page": "/home",
+      "runs": [
+        {
+          "ttfbMs": 2,
+          "fcpMs": 184,
+          "lcpMs": 36889,
+          "cls": 0.112,
+          "loadMs": 251,
+          "fullyLoadedMs": 37903,
+          "speedIndexMs": 19913,
+          "tbtMs": 0,
+          "totalBytes": 24156316,
+          "requests": 21,
+          "imageBytes": 24073788,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073788,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073788
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 288,
+          "lcpLoadDurationMs": 36441,
+          "lcpRenderDelayMs": 157,
+          "imageSavingsBytes": 21919097,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 4,
+          "fcpMs": 188,
+          "lcpMs": 36904,
+          "cls": 0.112,
+          "loadMs": 257,
+          "fullyLoadedMs": 37923,
+          "speedIndexMs": 19929,
+          "tbtMs": 60,
+          "totalBytes": 24156316,
+          "requests": 21,
+          "imageBytes": 24073788,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073788,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073788
+            }
+          },
+          "lcpTtfbMs": 6,
+          "lcpLoadDelayMs": 285,
+          "lcpLoadDurationMs": 36462,
+          "lcpRenderDelayMs": 152,
+          "imageSavingsBytes": 21919097,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 1,
+          "fcpMs": 183,
+          "lcpMs": 36896,
+          "cls": 0.112,
+          "loadMs": 249,
+          "fullyLoadedMs": 37909,
+          "speedIndexMs": 19918,
+          "tbtMs": 0,
+          "totalBytes": 24156316,
+          "requests": 21,
+          "imageBytes": 24073788,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073788,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073788
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 295,
+          "lcpLoadDurationMs": 36440,
+          "lcpRenderDelayMs": 158,
+          "imageSavingsBytes": 21919097,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.62
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 184,
+          "lcpMs": 36894,
+          "cls": 0.112,
+          "loadMs": 252,
+          "fullyLoadedMs": 37909,
+          "speedIndexMs": 19909,
+          "tbtMs": 359,
+          "totalBytes": 24156316,
+          "requests": 21,
+          "imageBytes": 24073788,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073788,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073788
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 283,
+          "lcpLoadDurationMs": 36455,
+          "lcpRenderDelayMs": 154,
+          "imageSavingsBytes": 21919097,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.46
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 179,
+          "lcpMs": 36889,
+          "cls": 0.112,
+          "loadMs": 251,
+          "fullyLoadedMs": 37906,
+          "speedIndexMs": 19904,
+          "tbtMs": 1145,
+          "totalBytes": 24156316,
+          "requests": 21,
+          "imageBytes": 24073788,
+          "imageRequests": 6,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 5,
+              "transferBytes": 41060,
+              "resourceBytes": 98919
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 7,
+              "transferBytes": 4581,
+              "resourceBytes": 2823
+            },
+            "Image": {
+              "requests": 6,
+              "transferBytes": 24073788,
+              "resourceBytes": 24060095
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 8,
+              "transferBytes": 77947
+            },
+            "localhost:5700": {
+              "requests": 7,
+              "transferBytes": 4581
+            },
+            "localhost:5702": {
+              "requests": 6,
+              "transferBytes": 24073788
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 284,
+          "lcpLoadDurationMs": 36444,
+          "lcpRenderDelayMs": 158,
+          "imageSavingsBytes": 21919097,
+          "lcpElement": "<section class=\"relative h-[calc(100svh-3.5rem)] min-h-[30rem] bg-neutral-950 bg-cover bg-…\" role=\"img\" aria-label=\"Sample photo 01\" style=\"background-image: url(&quot;https://localhost:5702/sample-01",
+          "performanceScore": 0.32
+        }
+      ],
+      "median": {
+        "ttfbMs": 2,
+        "fcpMs": 184,
+        "lcpMs": 36894,
+        "cls": 0.112,
+        "loadMs": 251,
+        "fullyLoadedMs": 37909,
+        "speedIndexMs": 19913,
+        "tbtMs": 60,
+        "totalBytes": 24156316,
+        "requests": 21,
+        "imageBytes": 24073788,
+        "imageRequests": 6,
+        "performanceScore": 0.62,
+        "lcpTtfbMs": 3,
+        "lcpLoadDelayMs": 285,
+        "lcpLoadDurationMs": 36444,
+        "lcpRenderDelayMs": 157,
+        "imageSavingsBytes": 21919097
+      }
+    },
+    "cable/album": {
+      "profile": "Cable, desktop (5 Mbps down, 28 ms RTT, no CPU slowdown)",
+      "page": "/albums/01a1a39c-f5ea-736c-9cac-618ba2656728",
+      "runs": [
+        {
+          "ttfbMs": 2,
+          "fcpMs": 186,
+          "lcpMs": 42823,
+          "cls": 0.0446,
+          "loadMs": 250,
+          "fullyLoadedMs": 47139,
+          "speedIndexMs": 22547,
+          "tbtMs": 5652,
+          "totalBytes": 30093248,
+          "requests": 15,
+          "imageBytes": 30013373,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013373,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013373
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 241,
+          "lcpLoadDurationMs": 42341,
+          "lcpRenderDelayMs": 238,
+          "imageSavingsBytes": 29835446,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-03.jpeg\" alt=\"Sample photo 03\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 182,
+          "lcpMs": 42358,
+          "cls": 0.046,
+          "loadMs": 247,
+          "fullyLoadedMs": 47152,
+          "speedIndexMs": 22418,
+          "tbtMs": 2165,
+          "totalBytes": 30093248,
+          "requests": 15,
+          "imageBytes": 30013373,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013373,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013373
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 248,
+          "lcpLoadDurationMs": 41937,
+          "lcpRenderDelayMs": 170,
+          "imageSavingsBytes": 29835446,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-03.jpeg\" alt=\"Sample photo 03\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 182,
+          "lcpMs": 42796,
+          "cls": 0.0446,
+          "loadMs": 244,
+          "fullyLoadedMs": 47138,
+          "speedIndexMs": 22539,
+          "tbtMs": 2823,
+          "totalBytes": 30093248,
+          "requests": 15,
+          "imageBytes": 30013373,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013373,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013373
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 239,
+          "lcpLoadDurationMs": 42340,
+          "lcpRenderDelayMs": 214,
+          "imageSavingsBytes": 29835446,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-03.jpeg\" alt=\"Sample photo 03\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 192,
+          "lcpMs": 42782,
+          "cls": 0.0446,
+          "loadMs": 249,
+          "fullyLoadedMs": 47138,
+          "speedIndexMs": 22558,
+          "tbtMs": 2961,
+          "totalBytes": 30093248,
+          "requests": 15,
+          "imageBytes": 30013373,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013373,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013373
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 240,
+          "lcpLoadDurationMs": 42340,
+          "lcpRenderDelayMs": 198,
+          "imageSavingsBytes": 29835446,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-03.jpeg\" alt=\"Sample photo 03\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        },
+        {
+          "ttfbMs": 2,
+          "fcpMs": 190,
+          "lcpMs": 42797,
+          "cls": 0.0446,
+          "loadMs": 253,
+          "fullyLoadedMs": 47142,
+          "speedIndexMs": 22538,
+          "tbtMs": 3280,
+          "totalBytes": 30093248,
+          "requests": 15,
+          "imageBytes": 30013373,
+          "imageRequests": 7,
+          "byType": {
+            "Document": {
+              "requests": 1,
+              "transferBytes": 1025,
+              "resourceBytes": 775
+            },
+            "Script": {
+              "requests": 3,
+              "transferBytes": 39595,
+              "resourceBytes": 98502
+            },
+            "Stylesheet": {
+              "requests": 1,
+              "transferBytes": 6142,
+              "resourceBytes": 25587
+            },
+            "Font": {
+              "requests": 1,
+              "transferBytes": 29720,
+              "resourceBytes": 29400
+            },
+            "Fetch": {
+              "requests": 2,
+              "transferBytes": 3393,
+              "resourceBytes": 2889
+            },
+            "Image": {
+              "requests": 7,
+              "transferBytes": 30013373,
+              "resourceBytes": 29996343
+            }
+          },
+          "byHost": {
+            "localhost:5173": {
+              "requests": 6,
+              "transferBytes": 76482
+            },
+            "localhost:5700": {
+              "requests": 2,
+              "transferBytes": 3393
+            },
+            "localhost:5702": {
+              "requests": 7,
+              "transferBytes": 30013373
+            }
+          },
+          "lcpTtfbMs": 3,
+          "lcpLoadDelayMs": 245,
+          "lcpLoadDurationMs": 42340,
+          "lcpRenderDelayMs": 210,
+          "imageSavingsBytes": 29835446,
+          "lcpElement": "<img src=\"https://localhost:5702/sample-03.jpeg\" alt=\"Sample photo 03\" loading=\"lazy\" class=\"photo-mono size-full object-cover group-hover:scale-[1.03]\">",
+          "performanceScore": 0.35
+        }
+      ],
+      "median": {
+        "ttfbMs": 2,
+        "fcpMs": 186,
+        "lcpMs": 42796,
+        "cls": 0.0446,
+        "loadMs": 249,
+        "fullyLoadedMs": 47139,
+        "speedIndexMs": 22539,
+        "tbtMs": 2961,
+        "totalBytes": 30093248,
+        "requests": 15,
+        "imageBytes": 30013373,
+        "imageRequests": 7,
+        "performanceScore": 0.35,
+        "lcpTtfbMs": 3,
+        "lcpLoadDelayMs": 241,
+        "lcpLoadDurationMs": 42340,
+        "lcpRenderDelayMs": 210,
+        "imageSavingsBytes": 29835446
+      }
+    }
+  }
+}
