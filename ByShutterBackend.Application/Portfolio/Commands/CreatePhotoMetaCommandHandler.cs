@@ -19,6 +19,7 @@ public class CreatePhotoMetaCommandHandler : IRequestHandler<CreatePhotoMetaComm
         {
             DisplayName = request.DisplayName ?? string.Empty,
             Description = request.Description ?? string.Empty,
+            OriginalFileName = request.OriginalFileName,
         }, cancellationToken);
     }
 }

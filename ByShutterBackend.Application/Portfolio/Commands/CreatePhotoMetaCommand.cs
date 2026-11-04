@@ -7,5 +7,6 @@ public record CreatePhotoMetaCommand(
     string ServerPath,
     string ImageAlt,
     string? DisplayName = null,
-    string? Description = null
+    string? Description = null,
+    string? OriginalFileName = null
 ) : IRequest;

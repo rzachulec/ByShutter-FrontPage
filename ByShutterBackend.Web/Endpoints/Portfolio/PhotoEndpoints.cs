@@ -35,22 +35,42 @@ public static class PhotoEndpoints
     public static async Task<IResult> UploadPhotoAsync([FromForm] UploadPhotoRequest request, IMediator mediator,
         IOptions<ImageStoragePathOptions> options, CancellationToken ct)
     {
-        var stream = request.Photo.OpenReadStream();
-        var meta = new CreatePhotoMetaCommand(
-            request.FileName,
+        // Strip any directory part so the upload cannot be written outside the image store.
+        var originalName = Path.GetFileName(request.FileName);
+        if (string.IsNullOrWhiteSpace(originalName))
+        {
+            return Results.BadRequest("FileName is required.");
+        }
+
+        // The site serves a web-sized WebP; the untouched upload is kept under originals/.
+        var webName = Path.ChangeExtension(originalName, ".webp");
+
+        await using var upload = new MemoryStream((int)request.Photo.Length);
+        await request.Photo.CopyToAsync(upload, ct);
+        upload.Position = 0;
+
+        // 1. Decode + re-encode first: a file that is not an image fails here, before anything is stored.
+        var webImage = await mediator.Send(new OptimizeImageCommand(upload), ct);
+        upload.Position = 0;
+
+        // 2. Metadata row (its unique FileName index rejects a duplicate before any file is written).
+        await mediator.Send(new CreatePhotoMetaCommand(
+            webName,
             options.Value.Directory,
             request.ImageAlt,
             request.DisplayName ?? string.Empty,
-            request.Description ?? string.Empty
-        );
-        var image = new UploadImageCommand(
-            stream,
-            request.FileName,
-            options.Value.Directory
-        );
+            request.Description ?? string.Empty,
+            originalName
+        ), ct);
 
-        await mediator.Send(meta, ct);
-        await mediator.Send(image, ct);
+        // 3. Files: the original and the web rendition.
+        await mediator.Send(new UploadImageCommand(
+            upload,
+            originalName,
+            webImage,
+            webName,
+            options.Value.Directory
+        ), ct);
 
         return Results.NoContent();
     }
