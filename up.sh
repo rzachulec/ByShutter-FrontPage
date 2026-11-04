@@ -23,8 +23,23 @@ docker compose up -d postgres caddy
 # the API runs migrations at startup and crashes if Postgres is not accepting connections yet
 wait_for "Postgres" 60 docker exec postgres pg_isready -U byshutter
 
-step "API (builds only if the code changed)"
-docker compose up -d --build byshutterbackend.web
+step "API (rebuilds only if the backend sources changed; works offline)"
+# Fingerprint of everything the image is built from. Unchanged => no build => no registry lookup.
+src_hash=$(git ls-files -co --exclude-standard -- ByShutterBackend.Web ByShutterBackend* ':!*/bin/*' ':!*/obj/*' ':!*/uploads/*' 2>/dev/null \
+  | sort -u | xargs shasum 2>/dev/null | shasum | cut -d' ' -f1)
+mkdir -p .run
+if docker image inspect byshutterbackend.web >/dev/null 2>&1 && [ "$(cat .run/api.hash 2>/dev/null)" = "$src_hash" ]; then
+  echo "backend unchanged, using existing image"
+  docker compose up -d --no-build byshutterbackend.web
+elif docker compose build byshutterbackend.web; then
+  echo "$src_hash" > .run/api.hash
+  docker compose up -d --no-build byshutterbackend.web
+elif docker image inspect byshutterbackend.web >/dev/null 2>&1; then
+  echo "build failed (offline?), starting the previously built image" >&2
+  docker compose up -d --no-build byshutterbackend.web
+else
+  echo "build failed and there is no previous image; connect once to pull the .NET SDK image" >&2; exit 1
+fi
 wait_for "API health" 90 curl -fs http://localhost:5700/health
 
 step "Client"
