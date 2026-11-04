@@ -1,0 +1,10 @@
+{
+  "name": "byshutter-bench",
+  "private": true,
+  "type": "module",
+  "description": "Skrypty pomiarowe do raportu wydajnosci ByShutter (seed danych, serwer strony zastepczej, Lighthouse)",
+  "dependencies": {
+    "chrome-launcher": "1.2.2",
+    "lighthouse": "13.6.0"
+  }
+}
