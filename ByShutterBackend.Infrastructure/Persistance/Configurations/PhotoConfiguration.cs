@@ -21,7 +21,11 @@ public class PhotoConfiguration : IEntityTypeConfiguration<Photo>
             .HasMaxLength(32);
         builder.HasIndex(p => p.FileName)
             .IsUnique();
-        
+
+        builder.Property(p => p.OriginalFileName)
+            .IsRequired(false)
+            .HasMaxLength(255);
+
         builder.Property(p => p.DisplayName)
             .IsRequired(false)
             .HasMaxLength(32);

@@ -2,9 +2,19 @@ namespace ByShutterBackend.Domain.Portfolio;
 
 public class Photo
 {
+    /// <summary>Sub-directory of the image store that keeps the untouched uploads.</summary>
+    public const string OriginalsDirectory = "originals";
+
     public Guid Id { get; init; } = Guid.CreateVersion7();
 
+    /// <summary>Name of the web-sized file that is shown on the site.</summary>
     public string FileName { get; set; }
+
+    /// <summary>
+    /// Name of the untouched upload, stored under <see cref="OriginalsDirectory"/>.
+    /// Null for photos uploaded before originals were kept.
+    /// </summary>
+    public string? OriginalFileName { get; set; }
 
     public string DisplayName { get; set; } = string.Empty;
 

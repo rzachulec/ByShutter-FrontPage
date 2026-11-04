@@ -194,6 +194,10 @@ namespace ByShutterBackend.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("OriginalFileName")
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
+
                     b.Property<string>("ServerPath")
                         .IsRequired()
                         .HasMaxLength(256)
