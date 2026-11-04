@@ -9,12 +9,22 @@ public class Album
     public string Name { get; private set; }
     public string Description { get; private set; }
 
+    /// <summary>Date shown for the album. Null means "use the date of its first photo".</summary>
+    public DateTime? Date { get; private set; }
+
     public ICollection<AlbumPhoto> Photos { get; private set; } = [];
 
     public Album(string name, string description = "")
     {
         Name = name;
         Description = description;
+    }
+
+    public void Update(string name, string description, DateTime? date)
+    {
+        Name = name;
+        Description = description;
+        Date = date;
     }
 
     public void AddPhoto(AlbumPhoto photo)

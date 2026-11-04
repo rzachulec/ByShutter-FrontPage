@@ -25,5 +25,9 @@ public class AlbumConfiguration : IEntityTypeConfiguration<Album>
         builder.Property(a => a.Description)
             .IsRequired(false)
             .HasMaxLength(256);
+
+        builder.Property(a => a.Date)
+            .IsRequired(false)
+            .HasColumnType("timestamp with time zone");
     }
 }
