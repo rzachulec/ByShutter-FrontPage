@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-black antialiased;
+    font-feature-settings: "ss01", "tnum";
+  }
+  ::selection {
+    @apply bg-black text-white;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-black;
+  }
+}
+
+/* Small-caps style label used for nav, captions and widget titles. */
+@utility label {
+  @apply text-xs font-medium uppercase tracking-[0.28em];
+}
+
+/* Agency look: photos sit in greyscale and bloom to colour on hover.
+   Touch devices have no hover, so they always show colour. */
+@layer components {
+  .photo-mono {
+    transition: filter 0.6s ease, transform 0.8s ease;
+  }
+  @media (hover: hover) {
+    .photo-mono {
+      filter: grayscale(1) contrast(1.04);
+    }
+    .group:hover .photo-mono,
+    .photo-mono:hover {
+      filter: none;
+    }
+  }
+}
+
+/* Admin form controls (kept monochrome and flat) */
+@layer components {
+  .field {
+    @apply w-full border-0 border-b border-black bg-transparent py-2 text-base outline-none placeholder:text-neutral-400 focus:border-b-2;
+  }
+  .btn {
+    @apply label inline-flex cursor-pointer items-center justify-center border border-black px-4 py-2.5 transition-colors hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-black;
+  }
+  .btn-solid {
+    @apply bg-black text-white hover:bg-white hover:text-black;
+  }
+  .link-danger {
+    @apply label cursor-pointer underline underline-offset-4 hover:no-underline;
+  }
+}
