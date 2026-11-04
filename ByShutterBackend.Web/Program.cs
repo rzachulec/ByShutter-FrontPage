@@ -9,12 +9,18 @@ using ByShutterBackend.Web.Endpoints.ClientAccess;
 using ByShutterBackend.Web.Endpoints.HomeConfig;
 using ByShutterBackend.Web.Endpoints.Portfolio;
 using FluentValidation;
+using Microsoft.AspNetCore.Http.Features;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Cryptography;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Photos are often large camera originals; Kestrel's default request limit is ~30 MB.
+const long MaxUploadBytes = 100L * 1024 * 1024;
+builder.WebHost.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = MaxUploadBytes);
+builder.Services.Configure<FormOptions>(options => options.MultipartBodyLengthLimit = MaxUploadBytes);
 
 builder.Services.Configure<ImageStoragePathOptions>(
     builder.Configuration.GetSection(nameof(ImageStoragePathOptions))
